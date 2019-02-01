@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import DashBoard from '@/components/dashBoard';
+import DashBoard from '@/pages/dashBoard';
 
 Vue.use(Router);
 
