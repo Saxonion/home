@@ -12,15 +12,17 @@
 </template>
 
 <script>
-// const f = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
-// function loop() {
-//   location.hash = f[Math.floor((Date.now() / 100) % f.length)];
-//   setTimeout(loop, 5);
-// }
-// setTimeout(loop(), 50);
-
+const f = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
+function loop() {
+  location.hash = f[Math.floor((Date.now() / 100) % f.length)];
+  setTimeout(loop, 5);
+}
 
 export default {
+  beforeRouteEnter(to, from, next) {
+    loop();
+    next();
+  },
   data() {
     return {
 
